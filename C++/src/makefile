@@ -4,7 +4,7 @@ LDFLAGS=
 SOURCES=main.cpp graph.cpp superperm.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 
-EXECUTABLE=superperm.exe
+EXECUTABLE=proj.exe
 
 all: $(SOURCES) $(EXECUTABLE)
 
