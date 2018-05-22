@@ -28,4 +28,6 @@ class Graph {
     vector<Edge *> edges;
 };
 
+vector<Edge *> dijkstra(Vertex * fromVector, Vertex * toVector, vector<Vertex *> vertices);
+
 #endif

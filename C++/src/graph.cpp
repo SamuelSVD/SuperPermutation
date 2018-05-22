@@ -10,6 +10,10 @@ Edge::Edge(Vertex * fromVertex, Vertex * toVertex, int weight) {
   this->weight = weight;
 }
 
+vector<Edge *> dijkstra(Vertex * fromVector, Vertex * toVector, vector<Vertex *> vertices) {
+  vecto<Edge *> solution;
+  return solution;
+}
 /*
 Edge * getEdge(fromV, toV, weight) {
   return new Edge(fromV, toV, weight)
