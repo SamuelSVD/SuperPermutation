@@ -11,7 +11,7 @@ Edge::Edge(Vertex * fromVertex, Vertex * toVertex, int weight) {
 }
 
 vector<Edge *> dijkstra(Vertex * fromVector, Vertex * toVector, vector<Vertex *> vertices) {
-  vecto<Edge *> solution;
+  vector<Edge *> solution;
   return solution;
 }
 /*
