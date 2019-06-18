@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "superperm.h"
 
 void createSuperpermVertices(int N, int i, string name, vector<Vertex *> * vertices) {

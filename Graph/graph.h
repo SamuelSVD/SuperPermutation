@@ -10,8 +10,9 @@ class Edge;
 class Vertex {
   public:
     string name;
-    vector<Edge *> edges;
+    vector<Edge *> * edges;
     Vertex(string name);
+	void createEdge(Vertex * toVertex, int weight);
 };
 
 class Edge {
