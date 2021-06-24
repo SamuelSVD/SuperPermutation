@@ -5,6 +5,7 @@ namespace SuperPermutation
 {
     class PermutationItem
     {
+        Random r;
         public int ID;
         public List<int> Items;
         public int size { get { return Items.Count; } }
@@ -51,6 +52,50 @@ namespace SuperPermutation
                 }
             }
             return weight;
+        }
+        public PermutationItem GetMaxItem(List<PermutationItem> UsedItems)
+        {
+            for(int i = WeighedList.Count - 1; i >= 0; i--)
+            {
+                foreach(PermutationItem pi in WeighedList[i])
+                {
+                    if (UsedItems.IndexOf(pi) == -1)
+                    {
+                        return pi;
+                    }
+                }
+            }
+            return null;
+        }
+        public PermutationItem GetRandomItem(List<PermutationItem> UsedItems)
+        {
+            List<int> ints = new List<int>();
+            for(int i = 0; i < WeighedList.Count - 1; i++)
+            {
+                ints.Add(i);
+            }
+            if (r == null)
+            {
+                r = new Random();
+            }
+            while(ints.Count > 0)
+            {
+                int ran = r.Next(2);
+                if (ints.Count < 2)
+                {
+                    ran = 1;
+                }
+                int i = ints[ints.Count-(2-ran)];
+                ints.Remove(i);
+                foreach (PermutationItem pi in WeighedList[i])
+                {
+                    if (UsedItems.IndexOf(pi) == -1)
+                    {
+                        return pi;
+                    }
+                }
+            }
+            return null;
         }
         override public string ToString()
         {
