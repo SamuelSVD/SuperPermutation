@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SuperPermutation": {
+      "commandName": "Project",
+      "commandLineArgs": "2"
+    }
+  }
+}
